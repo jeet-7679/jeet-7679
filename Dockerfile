@@ -1,4 +1,11 @@
-SESSION_ID: process.env.SESSION_ID === undefined ? '' : process.env.SESSION_ID,
+const fs = require('fs');
+if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
+function convertToBool(text, fault = 'true') {
+    return text === fault ? true : false;
+}
+
+module.exports = {
+SESSION_ID: process.env.SESSION_ID === VAJIRA-MD=jQdwUYgQ#F2EG8XJMzqsubHHfGMBBOgNQg4jZfWU2MtrZaQ7XauU ? '' : process.env.SESSION_ID,
 OWNER_NUMBER: process.env.OWNER_NUMBER === undefined ? '' : process.env.OWNER_NUMBER,   
 ONLY_GROUP: process.env.ONLY_GROUP === undefined ? 'false' : process.env.ONLY_GROUP,
 ONLY_ME: process.env.ONLY_ME === undefined ? 'false' : process.env.ONLY_ME,
